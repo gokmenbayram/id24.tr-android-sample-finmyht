@@ -1,0 +1,1 @@
+# id24.tr-android-sample
