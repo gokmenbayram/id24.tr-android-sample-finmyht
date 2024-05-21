@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        maven { url 'https://jitpack.io' }
+        maven {
+            url = 'https://maven.pkg.github.com/business-service-solution-gmbh/id24.tr-android-sdk'
+            name = "GitHubPackages"
+            credentials {
+                username = "bssserviceacc"
+                password = "xxxxxx"
+            }
+        }
+    }
+}
+rootProject.name = "IdentifySampleApp"
+include ':app'
+include ':design'
