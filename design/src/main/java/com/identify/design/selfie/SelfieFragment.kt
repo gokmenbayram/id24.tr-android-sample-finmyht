@@ -1,17 +1,11 @@
 package com.identify.design.selfie
 
-import android.view.View
-import androidx.viewbinding.ViewBinding
 import com.identify.design.R
-import com.identify.design.databinding.FragmentNfcModuleBinding
 import com.identify.design.databinding.FragmentSelfieBinding
 import com.identify.design.util.hideProgressDialog
-import com.identify.design.util.showInformationDialog
 import com.identify.design.util.showProgressDialog
 import com.identify.sdk.base.viewBinding.viewBinding
-import com.identify.sdk.information.BaseInformationDialogFragment
 import com.identify.sdk.selfie.BaseSelfieFragment
-import com.identify.sdk.toasty.Toasty
 
 class SelfieFragment : BaseSelfieFragment(){
 
@@ -38,7 +32,7 @@ class SelfieFragment : BaseSelfieFragment(){
 
     override fun getSelfieVerificationFailToastMessage(): String? = getString(R.string.selfie_verification_error)
 
-    override fun errorNoFaceMessage(): String  = getString(R.string.must_have_face)
+    override fun errorNoFaceMessage(): String?  = getString(R.string.must_have_face)
 
     override fun showProgress() {
         this.showProgressDialog()
