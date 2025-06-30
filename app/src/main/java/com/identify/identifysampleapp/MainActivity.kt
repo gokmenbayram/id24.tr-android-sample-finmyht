@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity() {
             .setPDFMaxFileSizeInAddress(5120)   // max 5 MB
             .setEnableFaceControlInSelfie(true)
             .setEnableLightInformationInCall(true)
+//            .setEnableLivenessWrongActionListener(true)
+//            .setStatusOfAutoCrop(true)
             .build()
 
 

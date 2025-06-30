@@ -189,4 +189,8 @@ sag das Wort auf dem Bild</string>
     <string name="missing_information">Fehlende oder falsche Informationen gefunden!</string>
     <string name="verify_data_below">Bitte überprüfen Sie die unten aufgeführten Daten</string>
     <string name="update">Aktualisieren</string>
+
+    <string name="wrong_action_warning">Falsche Aktion</string>
+    <string name="warning">Warnung</string>
+    <string name="skip_next_module">Fahren Sie mit dem nächsten Modul fort</string>
 </resources>

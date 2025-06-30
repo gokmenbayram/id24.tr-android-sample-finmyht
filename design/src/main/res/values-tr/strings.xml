@@ -188,4 +188,8 @@
     <string name="missing_information">Eksik veya yanlış bilgi bulundu!</string>
     <string name="verify_data_below">Lütfen aşağıdaki verileri doğrulayın</string>
     <string name="update">Güncelle</string>
+
+    <string name="wrong_action_warning">Yanlış Eylem</string>
+    <string name="warning">Uyarı</string>
+    <string name="skip_next_module">Bir sonraki modüle geçilecek</string>
 </resources>

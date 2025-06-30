@@ -14,6 +14,7 @@ import com.identify.design.databinding.FragmentCropperBinding
 import com.identify.design.util.hideProgressDialog
 import com.identify.design.util.showProgressDialog
 import com.identify.sdk.ApiResponseStatusListener
+import com.identify.sdk.SdkApp
 import com.identify.sdk.base.*
 import com.identify.sdk.base.viewBinding.viewBinding
 import com.identify.sdk.document.BaseCropBackOfFragment
@@ -68,6 +69,14 @@ class CropBackOfCardFragment: BaseCropBackOfFragment() {
                             )
                             layoutParams.gravity = Gravity.CENTER
                             binding.polygonView.layoutParams = layoutParams
+
+                            /**
+                             * To use this condition, you must set the setStatusOfAutoCrop function true in the initialize phase.
+                             */
+                            if(SdkApp.identityOptions?.getAutoCropStatus() == true){
+                                binding.confirmCropPreview.performClick()
+                                binding.cropResultWrap.visibility = View.VISIBLE
+                            }
                         }, { errorType ->
                             onError(errorType)
                         })

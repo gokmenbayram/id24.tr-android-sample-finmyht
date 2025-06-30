@@ -184,4 +184,8 @@
     <string name="missing_information">Обнаружена недостающая или неверная информация!</string>
     <string name="verify_data_below">Пожалуйста, проверьте данные ниже</string>
     <string name="update">обновлять</string>
+
+    <string name="wrong_action_warning">Неправильное действие</string>
+    <string name="warning">Внимание</string>
+    <string name="skip_next_module">Начнется следующий модуль</string>
 </resources>

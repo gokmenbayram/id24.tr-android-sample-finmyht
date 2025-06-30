@@ -184,4 +184,8 @@
     <string name="missing_information">Çatışmayan və ya səhv məlumat tapıldı!</string>
     <string name="verify_data_below">Lütfən, aşağıdakı məlumatları yoxlayın</string>
     <string name="update">yeniləmə</string>
+
+    <string name="wrong_action_warning">Yanlış Fəaliyyət</string>
+    <string name="warning">Xəbərdarlıq</string>
+    <string name="skip_next_module">Növbəti modula keçin</string>
 </resources>

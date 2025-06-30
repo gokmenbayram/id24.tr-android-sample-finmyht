@@ -1,6 +1,8 @@
 package com.identify.design.liveness
 
 import android.animation.Animator
+import android.app.AlertDialog
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import com.identify.design.R
@@ -13,6 +15,7 @@ import com.identify.sdk.base.viewBinding.viewBinding
 import com.identify.sdk.face.BaseLivenessDetectionFragment
 import com.identify.sdk.face.SelfieProcessListener
 import com.identify.sdk.face.SelfieListener
+import com.identify.sdk.face.WrongActionListener
 import com.identify.sdk.repository.model.enums.FaceDetectionProcessType
 import com.identify.sdk.repository.model.enums.UploadImageType
 import com.identify.sdk.scanner.State
@@ -22,6 +25,9 @@ class LivenessDetectionFragment : BaseLivenessDetectionFragment() {
 
 
     val binding by viewBinding(FragmentLivenessDetectionBinding::bind)
+
+    var wrongActionCounter = 0
+    val WRONG_ACTION_LIMIT = 3
 
     private fun hideLivenessProgress(){
         binding.livenessProgressView.visibility = View.GONE
@@ -114,7 +120,44 @@ class LivenessDetectionFragment : BaseLivenessDetectionFragment() {
                 ).show()
             }
         }
+
+
+        /**
+         * To use this listener, you must set the setEnableLivenessWrongActionListener function true in the initialize phase.
+         */
+        listenWrongAction(object : WrongActionListener {
+            override fun wrongActionPerformed(
+                expectedAction: FaceDetectionProcessType,
+                realizedAction: FaceDetectionProcessType
+            ) {
+                wrongActionCounter++
+                if(wrongActionCounter == WRONG_ACTION_LIMIT){
+                    stopAllLivenessProcess()
+
+                    showAlertDialog(requireContext()) // Bir sonraki modüle geçişi ve kullanıcıya bu geçişi bildirmek için
+                }
+
+                Toasty.error(requireContext(),getString(R.string.wrong_action_warning)).show()
+            }
+
+        })
     }
+
+    private fun showAlertDialog(context: Context) {
+        val dialog = AlertDialog.Builder(context)
+            .setTitle(getString(R.string.warning))
+            .setMessage(getString(R.string.skip_next_module))
+            .setCancelable(false)
+            .setPositiveButton(getString(R.string.go_on)) { dialogInterface, _ ->
+                skipNextModule()
+            }
+            .create()
+
+        dialog.setCanceledOnTouchOutside(false)
+
+        dialog.show()
+    }
+
 
     private fun animationStart(){
         binding.successStatusAnimationView.visibility = View.VISIBLE

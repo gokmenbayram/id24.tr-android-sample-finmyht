@@ -189,4 +189,8 @@ say the word in the picture</string>
     <string name="missing_information">Missing or incorrect information found!</string>
     <string name="verify_data_below">Please verify the data(s) below</string>
     <string name="update">Update</string>
+
+    <string name="wrong_action_warning">Wrong Action</string>
+    <string name="warning">Warning</string>
+    <string name="skip_next_module">Move to the next module</string>
 </resources>

@@ -1,7 +1,6 @@
 package com.identify.design.webrtc.started
 
 import android.os.Bundle
-import android.view.View
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.identify.design.R
 import com.identify.design.databinding.FragmentStartedCallBinding
@@ -59,6 +58,8 @@ class StartedCallFragment : BaseStartedCallFragment() {
        }
     }
 
+    override fun getCloseCallBottomDialogInstance(): BottomSheetDialogFragment? = null
+
     override fun setFaceGuideFinishedAnimationRepeatCount(): Int = 0
 
     override fun setCanGoBack(): Boolean = false
@@ -66,9 +67,7 @@ class StartedCallFragment : BaseStartedCallFragment() {
     override fun errorBackPressed(): String = getString(R.string.identify_is_in_progress)
 
 
-
     override fun getLayoutRes(): Int = R.layout.fragment_started_call
-
 
 
     companion object {
