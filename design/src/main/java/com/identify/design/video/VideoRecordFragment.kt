@@ -1,5 +1,6 @@
 package com.identify.design.video
 
+import android.view.View
 import com.airbnb.lottie.LottieDrawable
 import com.identify.design.R
 import com.identify.design.databinding.FragmentVideoRecordBinding
@@ -24,6 +25,14 @@ class VideoRecordFragment : BaseVideoRecordFragment() {
         videoPreview = binding.videoPreviewView
         videoPlayer = binding.videoPlayerView
         tvSecond = binding.tvSecondView
+
+
+        stopVideoSetup()
+    }
+
+    private fun stopVideoSetup() {
+        btnStopVideo = binding.ivStopVideo
+        binding.animVideoRecordingView.visibility = View.GONE
     }
 
     override fun showProgress() {

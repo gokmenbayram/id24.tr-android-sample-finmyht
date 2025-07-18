@@ -22,10 +22,10 @@ In settings.gradle, the value value in the credentials section must be filled fo
 repositories {
 ...
   maven {
-            url = 'https://maven.pkg.github.com/business-service-solution-gmbh/id24.tr-android-sdk'
+            url = 'https://maven.pkg.github.com/2sworks/id24.tr-android-sdk'
             name = "GitHubPackages"
             credentials {
-                username = "bssserviceacc"
+                username = "2sworksservice"
                 password = "xxxxxx"
             }
         }
