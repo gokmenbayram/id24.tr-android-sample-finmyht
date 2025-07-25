@@ -43,6 +43,7 @@ class ScanPassportFragment : BaseScanPassportFragment() {
         btnDirectCallWaiting  = binding.directCallWaitingView.cardDirectCallWaiting
         tvLightPercent = binding.tvLightPercentView
         imgLight = binding.imgLightView
+        flashButton = binding.flashToggle
     }
 
     override fun changeStatusColor(): Int? = R.color.colorGreen
@@ -51,6 +52,10 @@ class ScanPassportFragment : BaseScanPassportFragment() {
     override fun showOcrForPassportInformation() {
         this.showInformationDialog(null, R.drawable.img_passport, getString(R.string.mrz_info_title), getString(R.string.ocr_info_desc_passport))
     }
+
+    override fun getFlashOnResource() = R.drawable.ic_flash_on
+
+    override fun getFlashOffResource() = R.drawable.ic_flash_off
 
 
 

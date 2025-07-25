@@ -8,7 +8,7 @@ import com.identify.design.databinding.FragmentBottomNfcWhenCallingBinding
 import com.identify.sdk.base.viewBinding.viewBinding
 import com.identify.sdk.webrtc.started.BaseNfcWhenCallingBottomDialogFragment
 
-class NfcWhenCallingBottomDialogFragmentBottomDialogFragment : BaseNfcWhenCallingBottomDialogFragment() {
+class NfcWhenCallingBottomDialogFragment : BaseNfcWhenCallingBottomDialogFragment() {
 
     val binding by viewBinding(FragmentBottomNfcWhenCallingBinding::bind)
 
@@ -57,7 +57,7 @@ class NfcWhenCallingBottomDialogFragmentBottomDialogFragment : BaseNfcWhenCallin
 
         @JvmStatic
         fun newInstance() =
-            NfcWhenCallingBottomDialogFragmentBottomDialogFragment()
+            NfcWhenCallingBottomDialogFragment()
     }
 
     override fun getLayoutRes(): Int = R.layout.fragment_bottom_nfc_when_calling

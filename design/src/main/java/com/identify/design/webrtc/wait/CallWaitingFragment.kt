@@ -1,5 +1,7 @@
 package com.identify.design.webrtc.wait
 
+import android.os.Bundle
+import android.view.View
 import androidx.viewbinding.ViewBinding
 import com.identify.design.R
 import com.identify.design.databinding.FragmentWaitingCallBinding
@@ -9,6 +11,12 @@ import com.identify.sdk.webrtc.wait.BaseCallWaitingFragment
 class CallWaitingFragment : BaseCallWaitingFragment() {
 
     val binding by viewBinding(FragmentWaitingCallBinding::bind)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        disconnectSocketWhenAppOnBackground()
+    }
 
     override fun setQueueMessage(numberOfMember: String, estimatedTime: String) {
         binding.tvQueueView.text = String.format(getString(R.string.estimated_wait),estimatedTime,numberOfMember)

@@ -31,7 +31,7 @@ class ScanBackOfCardFragment : BaseScanBackOfCardFragment() {
         setBusyStatusListener(busyStatusListener)
 
         binding.closeScanner.setOnClickListener {
-            closeScanner()
+            onBackPressed()
         }
 
         getHoldSteadyMessage().let {

@@ -31,6 +31,7 @@ class CardScanModuleFragment : BaseCardScanModuleFragment() {
     override fun getOtherCardPhotoFrontInformationFragmentInstance(): Fragment? = InformationDialogFragment.newInstance(identifyInformationTypes = IdentifyInformationTypes.TAKE_PHOTO_FRONT_OF_OTHER_CARD_INFORMATION,imgResourceId = R.drawable.old_id_card,infoTitleText = getString(R.string.take_photo),infoContentText = getString(R.string.id_card_front_side))
 
     override fun getOtherCardPhotoBackInformationFragmentInstance(): Fragment? = InformationDialogFragment.newInstance(identifyInformationTypes = IdentifyInformationTypes.TAKE_PHOTO_BACK_OF_OTHER_CARD_INFORMATION,imgResourceId = R.drawable.old_id_card,infoTitleText = getString(R.string.take_photo),infoContentText = getString(R.string.id_card_back_side))
+
     override fun getCropFrontOfCardFragmentInstance(): Fragment? = CropFrontOfCardFragment.newInstance()
 
     override fun getCropBackOfCardFragmentInstance(): Fragment? = CropBackOfCardFragment.newInstance()

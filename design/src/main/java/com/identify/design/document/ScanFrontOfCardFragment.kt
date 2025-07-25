@@ -37,7 +37,7 @@ class ScanFrontOfCardFragment : BaseScanFrontOfCardFragment() {
         setBusyStatusListener(busyStatusListener)
 
         binding.closeScanner.setOnClickListener {
-            closeScanner()
+            onBackPressed()
         }
 
         getHoldSteadyMessage().let {
