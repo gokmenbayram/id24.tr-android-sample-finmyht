@@ -220,7 +220,9 @@ class CropBackOfCardFragment: BaseCropBackOfFragment() {
                Toasty.error(requireContext(), getTimeoutErrorMessage(), Toasty.LENGTH_SHORT, true).show()
            }
            is ApiComparisonError -> {
-               Toasty.error(requireContext(), reason.message?.get(0).toString(), Toasty.LENGTH_SHORT, true).show()
+               //Toasty.error(requireContext(), reason.message?.get(0).toString(), Toasty.LENGTH_SHORT, true).show()
+               Toasty.error(requireContext(), getString(R.string.comparison_error), Toasty.LENGTH_SHORT, true).show()
+               takePhotoAgain()
            }
        }
    }

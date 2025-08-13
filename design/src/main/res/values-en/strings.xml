@@ -193,4 +193,6 @@ say the word in the picture</string>
     <string name="wrong_action_warning">Wrong Action</string>
     <string name="warning">Warning</string>
     <string name="skip_next_module">Move to the next module</string>
+
+    <string name="comparison_error">Identity information comparison result is incorrect.</string>
 </resources>

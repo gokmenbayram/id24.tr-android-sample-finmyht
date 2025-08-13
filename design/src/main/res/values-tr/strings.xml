@@ -192,4 +192,6 @@
     <string name="wrong_action_warning">Yanlış Eylem</string>
     <string name="warning">Uyarı</string>
     <string name="skip_next_module">Bir sonraki modüle geçilecek</string>
+
+    <string name="comparison_error">Kimlik bilgileri karşılaştırma sonucu yanlış.</string>
 </resources>

@@ -193,4 +193,6 @@ sag das Wort auf dem Bild</string>
     <string name="wrong_action_warning">Falsche Aktion</string>
     <string name="warning">Warnung</string>
     <string name="skip_next_module">Fahren Sie mit dem nächsten Modul fort</string>
+
+    <string name="comparison_error">Kimlik bilgileri karşılaştırma sonucu yanlış.</string>
 </resources>

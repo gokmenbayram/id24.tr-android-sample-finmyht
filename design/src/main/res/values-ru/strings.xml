@@ -188,4 +188,6 @@
     <string name="wrong_action_warning">Неправильное действие</string>
     <string name="warning">Внимание</string>
     <string name="skip_next_module">Начнется следующий модуль</string>
+
+    <string name="comparison_error">Результат сравнения идентификационных данных неверный.</string>
 </resources>

@@ -3,6 +3,8 @@ package com.identify.design.document
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.Gravity
 import android.view.MotionEvent
 import android.view.View
@@ -128,23 +130,34 @@ class CropFrontOfCardFragment : BaseCropFrontOfCardFragment() {
 
             confirmCrop(binding.cropPreview, binding.polygonView.points) { croppedBitmap ->
 
-                faceControlForValidate(croppedBitmap,object : RotateListener {
+                if (SdkApp.identityOptions?.getSupportU18Status() == true){
+                    hideProgress()
+                    idFrontCompletedBitmap = croppedBitmap
 
-                    override fun rotatedBitmap(bitmap: Bitmap, rotateDegree: Int) {
-                        hideProgress()
-                        idFrontCompletedBitmap = bitmap
+                    Handler(Looper.getMainLooper()).post {
                         binding.cropResultPreview.setImageBitmap(idFrontCompletedBitmap)
                         binding.cropResultPreview.scaleType = ImageView.ScaleType.FIT_CENTER
-
                         hideProgress()
                     }
+                } else {
+                    faceControlForValidate(croppedBitmap,object : RotateListener {
 
-                    override fun onFailure(cropErrorType: CropErrorType) {
-                        onError(cropErrorType)
-                        hideProgress()
-                    }
+                        override fun rotatedBitmap(bitmap: Bitmap, rotateDegree: Int) {
+                            hideProgress()
+                            idFrontCompletedBitmap = bitmap
+                            binding.cropResultPreview.setImageBitmap(idFrontCompletedBitmap)
+                            binding.cropResultPreview.scaleType = ImageView.ScaleType.FIT_CENTER
 
-                })
+                            hideProgress()
+                        }
+
+                        override fun onFailure(cropErrorType: CropErrorType) {
+                            onError(cropErrorType)
+                            hideProgress()
+                        }
+
+                    })
+                }
             }
         }
 
@@ -217,7 +230,9 @@ class CropFrontOfCardFragment : BaseCropFrontOfCardFragment() {
                 Toasty.error(requireContext(), getTimeoutErrorMessage(), Toasty.LENGTH_SHORT, true).show()
             }
             is ApiComparisonError -> {
-                Toasty.error(requireContext(), reason.message?.get(0).toString(), Toasty.LENGTH_SHORT, true).show()
+                //Toasty.error(requireContext(), reason.message?.get(0).toString(), Toasty.LENGTH_SHORT, true).show()
+                Toasty.error(requireContext(), getString(R.string.comparison_error), Toasty.LENGTH_SHORT, true).show()
+                takePhotoAgain()
             }
         }
     }

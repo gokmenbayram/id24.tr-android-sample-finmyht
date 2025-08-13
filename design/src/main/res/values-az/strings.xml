@@ -188,4 +188,6 @@
     <string name="wrong_action_warning">Yanlış Fəaliyyət</string>
     <string name="warning">Xəbərdarlıq</string>
     <string name="skip_next_module">Növbəti modula keçin</string>
+
+    <string name="comparison_error">Şəxsiyyət məlumatlarının müqayisəsi nəticəsi yanlışdır.</string>
 </resources>
