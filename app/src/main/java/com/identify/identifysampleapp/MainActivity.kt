@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
             .setEnableLightInformationInCall(true)
 //            .setEnableLivenessWrongActionListener(true)
 //            .setStatusOfAutoCrop(true)
+            //.setSecretKeyBase64("SEATSJ8kk0v8+A1LeQsAMbOgL+fSj9pOaUKI5cDMITU=")
             .build()
 
 
