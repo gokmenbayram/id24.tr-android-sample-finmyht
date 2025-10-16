@@ -25,9 +25,9 @@ class NfcFragment : BaseNfcFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.directCallWaitingView.cardDirectCallWaiting.setOnClickListener {
+        /*binding.directCallWaitingView.cardDirectCallWaiting.setOnClickListener {
             goDirectCallWaiting()
-        }
+        }*/
 
         binding.cardNextView.setOnClickListener {
             finishNfcModule()
@@ -36,12 +36,12 @@ class NfcFragment : BaseNfcFragment() {
         listenNfcStatus(object : NfcStatusListener{
             override fun onStart() {
 
-                binding.relLayDefaultNfcView.visibility = View.GONE
-                binding.linLayReadNfcView.visibility = View.VISIBLE
+                //binding.relLayDefaultNfcView.visibility = View.GONE
+                //binding.linLayReadNfcView.visibility = View.VISIBLE
                 binding.tvNfcStatusView.text = getNfcReadingText()
-                binding.nfcAnimationView.setAnimation(setReadingNfcAnimation())
+                /*binding.nfcAnimationView.setAnimation(setReadingNfcAnimation())
                 binding.nfcAnimationView.repeatCount = setReadingNfcAnimationRepeatCount()
-                binding.nfcAnimationView.playAnimation()
+                binding.nfcAnimationView.playAnimation()*/
             }
 
             override fun onSuccess(nfcData: MrzDto) {
@@ -51,18 +51,18 @@ class NfcFragment : BaseNfcFragment() {
                         when(status){
                             true-> {
                                 binding.cardNextView.visibility = View.VISIBLE
-                                binding.nfcAnimationView.setAnimation(setNfcSuccessFinishedAnimation())
+                                //binding.nfcAnimationView.setAnimation(setNfcSuccessFinishedAnimation())
                                 binding.tvNfcStatusView.text = getNfcSuccessText()
                             }
                             false -> {
 
                                 binding.cardNextView.visibility = View.GONE
-                                binding.nfcAnimationView.setAnimation(setNfcFailFinishedAnimation())
+                                //binding.nfcAnimationView.setAnimation(setNfcFailFinishedAnimation())
                                 binding.tvNfcStatusView.text = getNfcTryAgainText()
                             }
                         }
-                        binding.nfcAnimationView.repeatCount = setNfcReadingFinishedAnimationRepeatCount()
-                        binding.nfcAnimationView.playAnimation()
+                       /* binding.nfcAnimationView.repeatCount = setNfcReadingFinishedAnimationRepeatCount()
+                        binding.nfcAnimationView.playAnimation()*/
                     }
 
                     override fun onFailure(reason: Reason) {
@@ -129,10 +129,10 @@ class NfcFragment : BaseNfcFragment() {
 
     private fun startFailUIProcess(){
         binding.cardNextView.visibility = View.GONE
-        binding.nfcAnimationView.setAnimation(setNfcFailFinishedAnimation())
-        binding.nfcAnimationView.repeatCount = setNfcReadingFinishedAnimationRepeatCount()
+        //binding.nfcAnimationView.setAnimation(setNfcFailFinishedAnimation())
+        //binding.nfcAnimationView.repeatCount = setNfcReadingFinishedAnimationRepeatCount()
         binding.tvNfcStatusView.text = getNfcTryAgainText()
-        binding.nfcAnimationView.playAnimation()
+        //binding.nfcAnimationView.playAnimation()
     }
 
     private fun getNfcComparisonErrorToastMessage(): String = getString(R.string.nfc_comparison_error)

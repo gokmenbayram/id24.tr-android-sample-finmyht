@@ -6,24 +6,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/new_background">
 
-    <include
+<!--    <include
         layout="@layout/band_redirect_call"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/directCallWaitingView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <ImageView
+        android:id="@+id/ic_hedef_logo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_hedef_logo_white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/textView2"
         style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:text="@string/address_title"
         android:textColor="@android:color/white"
-        android:textSize="15sp"
+        android:textSize="16sp"
+        android:fontFamily="@font/inter_semi_bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/directCallWaitingView" />
+        app:layout_constraintTop_toBottomOf="@+id/ic_hedef_logo"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -60,6 +72,7 @@
         android:text="@string/address_desc"
         android:textColor="@android:color/white"
         android:textSize="15sp"
+        android:fontFamily="@font/inter_semi_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
@@ -70,8 +83,8 @@
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
-        app:cardBackgroundColor="@android:color/white"
-        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#E2E8F0"
+        app:cardCornerRadius="13dp"
         app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,10 +97,9 @@
             android:layout_below="@+id/imgBackground"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:fontFamily="@font/nexa_slab_bold"
-            android:text="@string/add_photo_pdf"
-            android:textColor="@color/colorDarkBlue"
-            android:textSize="18sp" />
+            android:textColor="#2E384D"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="@string/add_photo_pdf" />
     </androidx.cardview.widget.CardView>
 
     <ImageView
@@ -108,8 +120,8 @@
         android:id="@+id/imgCloseView"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:visibility="gone"
         android:layout_margin="5dp"
+        android:visibility="gone"
         android:tint="@android:color/black"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -123,10 +135,10 @@
         android:layout_height="48dp"
         android:alpha="0.5"
         android:layout_alignParentBottom="true"
-        app:cardBackgroundColor="@android:color/white"
         android:layout_margin="20dp"
-        app:cardCornerRadius="12dp"
         app:cardElevation="4dp"
+        app:cardBackgroundColor="#E2E8F0"
+        app:cardCornerRadius="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -137,10 +149,9 @@
             android:layout_below="@+id/imgBackground"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:fontFamily="@font/nexa_slab_bold"
             android:text="@string/confirm"
-            android:textColor="@color/colorDarkBlue"
-            android:textSize="18sp" />
+            android:textColor="#2E384D"
+            android:fontFamily="@font/inter_semi_bold" />
     </androidx.cardview.widget.CardView>
 
 

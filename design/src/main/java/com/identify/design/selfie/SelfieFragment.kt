@@ -18,7 +18,7 @@ class SelfieFragment : BaseSelfieFragment(){
         btnPictureConfirm = binding.tvGoOn
         btnClose = binding.tvAgainTakePhoto
         relLayPictureConfirm = binding.relLayPictureConfirmView
-        btnDirectCallWaiting = binding.directCallWaitingView.cardDirectCallWaiting
+        //btnDirectCallWaiting = binding.directCallWaitingView.cardDirectCallWaiting
         selfiePreview = binding.selfiePreviewView
         viewFinderWindow = binding.viewFinderWindowView
         viewFinderBackground = binding.viewFinderBackgroundView

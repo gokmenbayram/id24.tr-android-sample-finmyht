@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Açık ve aktif (checked + enabled) -->
+    <item android:color="@color/blue_20" android:state_checked="true" android:state_enabled="true"/>
+
+    <!-- Kapalı ve aktif (unchecked + enabled) -->
+    <item android:color="@color/blue_20" android:state_checked="false" android:state_enabled="true"/>
+
+    <!-- Açık ama pasif (checked + disabled) -->
+    <item android:color="@color/blue_20" android:state_checked="true" android:state_enabled="false"/>
+
+    <!-- Kapalı ve pasif (unchecked + disabled) -->
+    <item android:color="#E5E7EB" android:state_checked="false" android:state_enabled="false"/>
+</selector>

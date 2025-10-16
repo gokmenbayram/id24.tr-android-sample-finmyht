@@ -41,8 +41,8 @@
     <string name="nfc_try_again">NFC verileri okunamadı. Lütfen tekrar deneyiniz.</string>
     <string name="nfc_success">NFC okuma başarılı! </string>
     <string name="pls_wait">Lütfen Bekleyin...</string>
-    <string name="pls_wait_for_calling">Müşteri temsilcimizin sizi araması için lütfen bu ekranda bekleyiniz.</string>
-    <string name="estimated_wait">Tahmini bekleme süreniz %1$s dakika, sırada bekleyen %2$s. kişisiniz</string>
+    <string name="pls_wait_for_calling">Müşteri temsilcimiz ile görüşmek için lütfen bekleyiniz.</string>
+    <string name="estimated_wait">Bekleyenler arasında %1$s. kişisiniz, tahmini bekleme süreniz %2$s</string>
     <string name="agent_ready">İlk sıradasınız müşteri temsilcisi şimdi sizi aramak üzere lütfen bekleyiniz.</string>
     <string name="wait_with_id">Kimliğinizin yanınızda ve hazır olduğundan emin olunuz.</string>
     <string name="receiving_a_call">Müşteri temsilcimiz arıyor...</string>
@@ -194,4 +194,12 @@
     <string name="skip_next_module">Bir sonraki modüle geçilecek</string>
 
     <string name="comparison_error">Kimlik bilgileri karşılaştırma sonucu yanlış.</string>
+
+    <string name="preparation_list">Hazırlık Listesi</string>
+    <string name="auth_preparation_message">Kimlik doğrulama işlemi öncesi, aşağıdaki adımları kontrol edip gerekli izinleri verdiğinizden ve uygun bir ortamda olduğunuzdan emin olun</string>
+    <string name="take_id_front_photo_instruction">Lütfen kimliğinizin ön yüzünün fotoğrafını çekin, hazırsanız kamerayı açarak başlayabilirsiniz.</string>
+    <string name="take_id_back_photo_instruction">Lütfen kimliğinizin arka yüzünün fotoğrafını çekin, hazırsanız kamerayı açarak başlayabilirsiniz.</string>
+    <string name="id_front_title">Kimlik Ön Yüzü</string>
+    <string name="id_back_title">Kimlik Arka Yüzü</string>
+
 </resources>

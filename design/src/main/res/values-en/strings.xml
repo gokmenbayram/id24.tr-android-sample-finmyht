@@ -35,7 +35,7 @@
     <string name="selected_language">Selected Language : </string>
     <string name="button_deny">Deny</string>
     <string name="agent_ready">You are in the first row, please wait for the customer representative to call you now.</string>
-    <string name="estimated_wait">Your estimated wait time is %1$s minutes, you are the %2$s person waiting in line.</string>
+    <string name="estimated_wait">You are number %1$s in the queue, your estimated waiting time is %2$s</string>
     <string name="permission_camera_rationale">To make a video call with the identify-agent,please allow access to the camera and microphone. </string>
     <string name="nfc_description"> Please hold your phone up to your ID card to read the NFC</string>
     <string name="nfc_ready">Ready to scan</string>
@@ -195,4 +195,12 @@ say the word in the picture</string>
     <string name="skip_next_module">Move to the next module</string>
 
     <string name="comparison_error">Identity information comparison result is incorrect.</string>
+
+    <string name="preparation_list">Preparation List</string>
+    <string name="auth_preparation_message">Before the identity verification process, please check the following steps and make sure you have granted the necessary permissions and are in a suitable environment</string>
+    <string name="take_id_front_photo_instruction">Please take a photo of the front side of your ID card. When you\'re ready, you can start by opening the camera.</string>
+    <string name="take_id_back_photo_instruction">Please take a photo of the back side of your ID card. When you\'re ready, you can start by opening the camera.</string>
+    <string name="id_front_title">ID Front Side</string>
+    <string name="id_back_title">ID Back Side</string>
+
 </resources>

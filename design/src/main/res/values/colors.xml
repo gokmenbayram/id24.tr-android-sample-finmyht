@@ -38,6 +38,13 @@
 	<color name="cropBlack">#FF000000</color>
 	<color name="cropWhite">#FFFFFFFF</color>
 	<color name="colorBlackFortyPercentAlpha">#66000000</color>
-	<color name="button_text_color">#3447D6</color>
+	<color name="blue_10">#3F52C8</color>
+	<color name="blue_20">#2C3778</color>
+	<color name="black">#FF000000</color>
+	<color name="white_10">#FFE4E4E7</color>
+	<color name="purple">#FF54007D</color>
+	<color name="dark_blue">#2E384D</color>
+	<color name="white">#FFFFFF</color>
+	<color name="gray_10">#EEF2FF</color>
 
 </resources>

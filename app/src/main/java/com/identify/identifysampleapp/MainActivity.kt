@@ -46,11 +46,11 @@ class MainActivity : AppCompatActivity() {
 
 
         val identifyObject = IdentifySdk.Builder()
-            .api("api url")
+            .api("https://apiqa.identify.com.tr/")
             .lifeCycle(this.lifecycle)
             .options(identityOptions)
             .build()
 
-        identifyObject.startIdentification(this,"xxxx-xxxx-xxxx-xxxx-xxxxxxx","tr")
+        identifyObject.startIdentification(this,"60f8f48ea6a586e58664ad3e1f391b3d61a25cbb","tr")
     }
 }

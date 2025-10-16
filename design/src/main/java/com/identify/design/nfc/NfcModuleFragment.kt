@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.identify.design.R
 import com.identify.design.dialogs.InformationDialogFragment
 import com.identify.design.dialogs.NfcMissingDataBottomDialogFragment
+import com.identify.design.util.ScreenType
 import com.identify.sdk.mrz.BaseNfcModuleFragment
 import com.identify.sdk.repository.model.enums.IdentifyInformationTypes
 
@@ -19,7 +20,7 @@ class NfcModuleFragment : BaseNfcModuleFragment() {
 
     override fun getCheckIdentityInformationFragmentInstance(): DialogFragment? = CheckIdentityInformationFragment.newInstance()
 
-    override fun getIdCardNfcInformationFragmentInstance(): Fragment? = InformationDialogFragment.newInstance(identifyInformationTypes =  IdentifyInformationTypes.ID_CARD_NFC_INFORMATION,animResourceId = R.raw.nfc, infoTitleText = getString(R.string.mrz_info_title), infoContentText = getString(R.string.nfc_info_desc_id))
+    override fun getIdCardNfcInformationFragmentInstance(): Fragment? = InformationDialogFragment.newInstance(identifyInformationTypes =  IdentifyInformationTypes.ID_CARD_NFC_INFORMATION,animResourceId = R.raw.nfc, infoTitleText = getString(R.string.mrz_info_title), infoContentText = getString(R.string.nfc_info_desc_id), screenType = ScreenType.NFC_INFO)
 
     override fun getPassportNfcInformationFragmentInstance(): Fragment? = InformationDialogFragment.newInstance(identifyInformationTypes = IdentifyInformationTypes.PASSPORT_NFC_INFORMATION,animResourceId = R.raw.nfc,infoTitleText = getString(R.string.mrz_info_title),infoContentText = getString(R.string.nfc_info_desc_passport))
 

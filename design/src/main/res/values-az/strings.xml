@@ -42,7 +42,7 @@
     <string name="nfc_success">NFC oxuması uğurla başa çatdı!</string>
     <string name="pls_wait">Zəhmət olmasa gözləyin...</string>
     <string name="pls_wait_for_calling">Müştəri təmsilçimizin sizi zəng etməsi üçün bu ekranı gözləyin.</string>
-    <string name="estimated_wait">Təxminən gözləmə müddətiniz %1$s dəqiqə, gözləyən %2$s nəfərdir.</string>
+    <string name="estimated_wait">Gözləyənlər arasında %1$s. şəxs sizsiniz, təxmini gözləmə müddətiniz %2$s</string>
     <string name="agent_ready">Birinci sıradasınız, müştəri təmsilçisi sizi zəng etmək üçün gözləyir.</string>
     <string name="wait_with_id">Kimliyiniz yanınızda və hazırdır.</string>
     <string name="receiving_a_call">Müştəri təmsilçimiz zəng edir...</string>
@@ -190,4 +190,12 @@
     <string name="skip_next_module">Növbəti modula keçin</string>
 
     <string name="comparison_error">Şəxsiyyət məlumatlarının müqayisəsi nəticəsi yanlışdır.</string>
+
+    <string name="preparation_list">Hazırlıq Siyahısı</string>
+    <string name="auth_preparation_message">Kimlik doğrulama prosesindən əvvəl aşağıdakı addımları yoxlayın və lazımi icazələri verdiyinizdən və uyğun mühitdə olduğunuzdan əmin olun</string>
+    <string name="take_id_front_photo_instruction">Zəhmət olmasa şəxsiyyət vəsiqənizin ön tərəfinin şəklini çəkin. Hazırsınızsa, kameranı açaraq başlaya bilərsiniz.</string>
+    <string name="take_id_back_photo_instruction">Zəhmət olmasa şəxsiyyət vəsiqənizin arxa tərəfinin şəklini çəkin. Hazırsınızsa, kameranı açaraq başlaya bilərsiniz.</string>
+    <string name="id_front_title">Şəxsiyyət vəsiqəsinin ön tərəfi</string>
+    <string name="id_back_title">Şəxsiyyət vəsiqəsinin arxa tərəfi</string>
+
 </resources>

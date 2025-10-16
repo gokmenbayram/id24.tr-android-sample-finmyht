@@ -57,7 +57,7 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/bg_button_ok"
         android:text="@string/okay"
-        android:textColor="@color/button_text_color"
+        android:textColor="@color/blue_10"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -23,7 +23,7 @@ class EnterAddressFragment : BaseEnterAddressFragment() {
         btnGoTakePhoto  = binding.cardTakePhotoView
         imgProofPhoto = binding.imgProofPhotoView
         imgClose = binding.imgCloseView
-        btnDirectCallWaiting = binding.directCallWaitingView.cardDirectCallWaiting
+        //btnDirectCallWaiting = binding.directCallWaitingView.cardDirectCallWaiting
 
         initUI();
         initHandlers()
@@ -58,43 +58,38 @@ class EnterAddressFragment : BaseEnterAddressFragment() {
     }
 
     private fun initUI() {
-        val enabledPDF = SdkApp.identityOptions?.getEnablePDFInAddress() ?: false
-        if (enabledPDF) {
-            binding.cardTakePhotoViewTextView.setText(R.string.add_photo_pdf)
-        } else {
-            binding.cardTakePhotoViewTextView.setText(R.string.take_photo)
-        }
+        binding.cardTakePhotoViewTextView.setText(R.string.add_photo_pdf)
     }
 
     private fun initHandlers() {
-        val enabledPDF = SdkApp.identityOptions?.getEnablePDFInAddress() ?: false
-        if (enabledPDF) {
-            btnGoTakePhoto?.setOnClickListener {
-                val bottomSheetDialog = BottomSheetDialog(requireContext())
-                val view = layoutInflater.inflate(R.layout.bottom_sheet_choose_action, null)
+        //val enabledPDF = SdkApp.identityOptions?.getEnablePDFInAddress() ?: false
+        btnGoTakePhoto?.setOnClickListener {
+            val bottomSheetDialog = BottomSheetDialog(requireContext())
+            val view = layoutInflater.inflate(R.layout.bottom_sheet_choose_action, null)
 
-                val btnTakePhoto = view.findViewById<LinearLayout>(R.id.btnTakePhoto)
-                val btnPickPdf = view.findViewById<LinearLayout>(R.id.btnPickPdf)
+            val btnTakePhoto = view.findViewById<LinearLayout>(R.id.btnTakePhoto)
+            val btnPickPdf = view.findViewById<LinearLayout>(R.id.btnPickPdf)
 
-                // Handle Take Photo action
-                btnTakePhoto.setOnClickListener {
-                    bottomSheetDialog.dismiss()
-                    takePhotoButtonPressed()
-                }
-
-                // Handle Pick PDF action
-                btnPickPdf.setOnClickListener {
-                    bottomSheetDialog.dismiss()
-                    pickPDFButtonPressed()
-                }
-
-                bottomSheetDialog.setContentView(view)
-                bottomSheetDialog.show()
+            // Handle Take Photo action
+            btnTakePhoto.setOnClickListener {
+                bottomSheetDialog.dismiss()
+                takePhotoButtonPressed()
             }
-        } else {
+
+            // Handle Pick PDF action
+            btnPickPdf.setOnClickListener {
+                bottomSheetDialog.dismiss()
+                pickPDFButtonPressed()
+            }
+
+            bottomSheetDialog.setContentView(view)
+            bottomSheetDialog.show()
+        }
+
+        /*else {
             btnGoTakePhoto?.setOnClickListener {
                 takePhotoButtonPressed()
             }
-        }
+        }*/
     }
 }

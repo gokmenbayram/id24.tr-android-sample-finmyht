@@ -16,7 +16,7 @@ class TakeAddressPhotoFragment : BaseTakeAddressPhotoFragment() {
         btnPictureConfirm = binding.tvGoOn
         btnClose = binding.tvAgainTakePhoto
         relLayPictureConfirm = binding.relLayPictureConfirmView
-        btnDirectCallWaiting = binding.directCallWaitingView.cardDirectCallWaiting
+        //btnDirectCallWaiting = binding.directCallWaitingView.cardDirectCallWaiting
         addressPreview = binding.addressPreviewView
         imgCapturedImage = binding.imgCapturedImageView
     }

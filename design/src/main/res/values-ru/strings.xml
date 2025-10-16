@@ -35,7 +35,7 @@
     <string name="selected_language">Выбранный язык: </string>
     <string name="button_deny">Отказать</string>
     <string name="agent_ready">Вы находитесь в первом ряду, пожалуйста, дождитесь вызова представителя клиента.</string>
-    <string name="estimated_wait">Ваше ожидаемое время ожидания составляет %1$s минут, вы %2$s в очереди.</string>
+    <string name="estimated_wait">Вы %1$s-й в очереди, предполагаемое время ожидания — %2$s</string>
     <string name="permission_camera_rationale">Для видеозвонка с агентом по идентификации разрешите доступ к камере и микрофону.</string>
     <string name="nfc_description"> Пожалуйста, приложите ваш телефон к вашему удостоверению личности, чтобы считать NFC</string>
     <string name="nfc_ready">Готов к сканированию</string>
@@ -190,4 +190,12 @@
     <string name="skip_next_module">Начнется следующий модуль</string>
 
     <string name="comparison_error">Результат сравнения идентификационных данных неверный.</string>
+
+    <string name="preparation_list">Список подготовки</string>
+    <string name="auth_preparation_message">Перед процессом идентификации проверьте следующие шаги и убедитесь, что вы предоставили необходимые разрешения и находитесь в подходящем месте</string>
+    <string name="take_id_front_photo_instruction">Пожалуйста, сфотографируйте лицевую сторону вашего удостоверения личности. Когда будете готовы, начните, открыв камеру.</string>
+    <string name="take_id_back_photo_instruction">Пожалуйста, сфотографируйте обратную сторону вашего удостоверения личности. Когда будете готовы, начните, открыв камеру.</string>
+    <string name="id_front_title">Лицевая сторона удостоверения личности</string>
+    <string name="id_back_title">Обратная сторона удостоверения личности</string>
+
 </resources>

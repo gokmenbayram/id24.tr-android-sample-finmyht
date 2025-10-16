@@ -6,6 +6,44 @@
     android:background="@color/backgroundColor"
     android:layout_height="wrap_content">
 
+    <TextView
+        android:id="@+id/tvMissingDataTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semi_bold"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/red"
+        android:text="@string/missing_information"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tvMissingDataMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:fontFamily="@font/inter_light"
+        android:gravity="center"
+        android:text="@string/verify_data_below"
+        app:layout_constraintTop_toBottomOf="@+id/tvMissingDataTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp"
+        />
+
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvMissingDataMessage"
+        android:background="#DEDEDE"
+        android:layout_marginTop="15dp"/>
+
     <RelativeLayout
         android:id="@+id/relLayDocNumber"
         android:layout_width="match_parent"
@@ -15,14 +53,16 @@
         android:layout_marginStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/v_line">
 
-        <com.google.android.material.textview.MaterialTextView
+        <TextView
             android:id="@+id/tvDocNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="@string/id_serial_no" />
+            android:text="@string/id_serial_no"
+            android:fontFamily="@font/inter_semi_bold"
+            android:textSize="14sp" />
 
         <ImageButton
             android:id="@+id/imgDocNumInfo"
@@ -40,8 +80,7 @@
             android:layout_height="50dp"
             android:layout_below="@+id/imgDocNumInfo"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/form_input_stroke"
-            android:hint="@string/id_serial_no"
+            android:background="@drawable/edittext_border_bg"
             android:inputType="textCapSentences"
             android:maxLength="9"
             android:maxLines="1"
@@ -69,7 +108,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="@string/birth_day" />
+            android:hint="@string/birth_day"
+            android:fontFamily="@font/inter_semi_bold"
+            android:textSize="14sp"/>
 
         <ImageButton
             android:id="@+id/imgBirthDay"
@@ -88,8 +129,7 @@
             android:layout_below="@+id/imgBirthDay"
             android:layout_gravity="center_vertical"
             android:textColor="@android:color/black"
-            android:background="@drawable/form_input_stroke"
-            android:hint="@string/birth_day"
+            android:background="@drawable/edittext_border_bg"
             android:textSize="18sp"
             android:gravity="center_vertical"
             android:maxLines="1"
@@ -114,12 +154,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relLayBirthDay">
 
-        <com.google.android.material.textview.MaterialTextView
+        <TextView
             android:id="@+id/tvExpireDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="@string/card_expiry_date" />
+            android:hint="@string/card_expiry_date"
+            android:fontFamily="@font/inter_semi_bold"
+            android:textSize="14sp"/>
 
         <ImageButton
             android:id="@+id/imgExpireDay"
@@ -138,8 +180,7 @@
             android:layout_below="@+id/imgExpireDay"
             android:layout_gravity="center_vertical"
             android:textColor="@android:color/black"
-            android:background="@drawable/form_input_stroke"
-            android:hint="@string/card_expiry_date"
+            android:background="@drawable/edittext_border_bg"
             android:textSize="18sp"
             android:gravity="center_vertical"
             android:maxLines="1"
@@ -154,13 +195,13 @@
 
     <Button
         android:id="@+id/btnSaveView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/form_input_stroke"
-        android:backgroundTint="@color/primaryColor"
+        android:backgroundTint="#44AB33"
         android:text="@string/save"
         android:textColor="@android:color/white"
         android:layout_marginBottom="30dp"
