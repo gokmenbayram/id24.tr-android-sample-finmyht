@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.identify.design.R
 import com.identify.design.databinding.FragmentPrepareBinding
+import com.identify.design.dialogs.CustomDialog
 import com.identify.sdk.base.viewBinding.viewBinding
 import com.identify.sdk.prepare.BasePrepareFragment
 
@@ -22,6 +23,16 @@ class PrepareFragment : BasePrepareFragment() {
         cbPlaceState = binding.cbPlaceState*/
 
         setupSwitchListeners()
+
+        binding.ivCloseApp.setOnClickListener {
+            CustomDialog(requireContext()).show(
+                title = "Uyarı",
+                message = "Çıkış yapmak istediğinize emin misiniz?",
+                onConfirm = {
+                    requireActivity().finish()
+                }
+            )
+        }
     }
 
     override fun getLayoutRes() = R.layout.fragment_prepare
@@ -58,6 +69,7 @@ class PrepareFragment : BasePrepareFragment() {
                         swPlaceStatePermission.isChecked
 
             btnConfirm.isEnabled = allChecked
+            btnConfirm.alpha = if (allChecked) 1f else 0.5f
         }
     }
 }

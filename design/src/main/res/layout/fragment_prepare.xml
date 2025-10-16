@@ -13,6 +13,16 @@
         tools:ignore="MissingDefaultResource">
 
         <ImageView
+            android:id="@+id/iv_close_app"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_home"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/ivLogo"
+            app:layout_constraintTop_toTopOf="@id/ivLogo"/>
+
+        <ImageView
             android:id="@+id/ivLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -252,7 +262,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_light"
-            android:buttonTint="@color/blue_10"
+            android:buttonTint="@color/blue_20"
             android:clickable="false"
             android:enabled="false"
             android:paddingStart="10dp"
@@ -378,7 +388,7 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>-->
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnConfirm"
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -389,6 +399,7 @@
             android:backgroundTint="@color/blue_20"
             android:enabled="false"
             android:clickable="false"
+            android:gravity="center"
             android:text="@string/go_on"
             android:textColor="@color/white"
             android:textSize="14sp"

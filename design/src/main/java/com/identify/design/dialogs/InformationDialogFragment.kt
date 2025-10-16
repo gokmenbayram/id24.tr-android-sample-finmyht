@@ -43,6 +43,16 @@ class InformationDialogFragment : BaseInformationDialogFragment() {
         cbSignLang = binding.cbSignLangView
 
         checkScreenType(ScreenType.convertToScreenType(arguments?.getString("screenType")))
+
+        binding.ivCloseApp.setOnClickListener {
+            CustomDialog(requireContext()).show(
+                title = "Uyarı",
+                message = "Çıkış yapmak istediğinize emin misiniz?",
+                onConfirm = {
+                    requireActivity().finish()
+                }
+            )
+        }
     }
 
     override fun changeStatusColor(): Int? = android.R.color.transparent
