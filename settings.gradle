@@ -17,7 +17,7 @@ dependencyResolutionManagement {
             name = "GitHubPackages"
             credentials {
                 username = "2sworksservice"
-                password = "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"
+                password = "xxxxxx"
             }
         }
     }
