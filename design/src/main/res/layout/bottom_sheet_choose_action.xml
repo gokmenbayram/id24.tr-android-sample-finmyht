@@ -25,8 +25,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/add_photo_pdf_photo"
+            android:fontFamily="@font/inter_semi_bold"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/textColor" />
+            android:textColor="@color/title_color" />
     </LinearLayout>
 
     <LinearLayout
@@ -48,8 +49,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/add_photo_pdf_pdf"
+            android:fontFamily="@font/inter_semi_bold"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/textColor" />
+            android:textColor="@color/title_color"/>
     </LinearLayout>
 
 </LinearLayout>

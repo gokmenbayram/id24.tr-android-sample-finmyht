@@ -41,6 +41,7 @@
         android:layout_height="wrap_content"
         android:text="@string/id_serial_no"
         android:fontFamily="@font/inter_semi_bold"
+        android:textColor="@color/title_color"
         android:textSize="14sp"
         android:layout_below="@id/v_line"
         android:layout_marginStart="10dp"
@@ -68,6 +69,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/birth_day"
         android:fontFamily="@font/inter_semi_bold"
+        android:textColor="@color/title_color"
         android:textSize="14sp"
         android:layout_below="@id/etSerialNumber"
         android:layout_marginStart="10dp"
@@ -94,6 +96,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/card_expiry_date"
         android:fontFamily="@font/inter_semi_bold"
+        android:textColor="@color/title_color"
         android:textSize="14sp"
         android:layout_below="@id/tvDateOfBirth"
         android:layout_marginStart="10dp"
@@ -129,7 +132,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fontFamily="@font/nexa_slab_bold"
+            android:fontFamily="@font/inter_semi_bold"
             android:gravity="center"
             android:text="@string/update"
             android:textColor="@color/white" />

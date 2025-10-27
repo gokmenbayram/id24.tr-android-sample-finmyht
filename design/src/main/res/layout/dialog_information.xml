@@ -95,9 +95,10 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:fontFamily="@font/nexa_slab_bold"
+            android:fontFamily="@font/inter_semi_bold"
             android:gravity="center"
-            android:textColor="@android:color/white"
+            tools:text="asdasdasdasd"
+            android:textColor="#2E384D"
             android:textSize="20sp" />
 
         <TextView
@@ -109,9 +110,10 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:fontFamily="@font/nunito_sans_regular"
+            android:fontFamily="@font/inter_light"
             android:gravity="center"
-            android:textColor="@android:color/white"
+            tools:text="asdsadsadasd"
+            android:textColor="#8798AD"
             android:textSize="14sp" />
 
         <CheckBox
@@ -119,14 +121,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvInfoContentView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:checked="false"
+            android:fontFamily="@font/inter_light"
             android:padding="10dp"
+            android:visibility="gone"
             android:text="@string/sign_checkbox_text"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:visibility="gone" />
+            android:textColor="#8798AD" />
 
     </RelativeLayout>
 
@@ -153,15 +158,15 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:text="Adımlar"
-                android:textColor="#2E384D"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/inter_semi_bold"
+                android:textColor="@color/title_color"
+                android:textSize="18sp"/>
 
             <!-- Adımlar Sekmeleri -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -175,7 +180,7 @@
                     android:background="@drawable/bg_step_active"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="4dp">
 
                     <ImageView
                         android:id="@+id/ivKisiselBilgilerim"
@@ -188,9 +193,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:ellipsize="end"
-                        android:fontFamily="@font/inter_semi_bold"
+                        android:maxLines="2"
+                        android:fontFamily="@font/inter_light"
                         android:gravity="center"
-                        android:text="Kişisel Bilgilerim"
+                        android:text="Kişisel\nBilgilerim"
                         android:textColor="#37A311"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -204,7 +210,7 @@
                     android:background="@drawable/bg_step_selected"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="6dp">
 
                     <ImageView
                         android:id="@+id/ivKimlikDogrulama"
@@ -217,10 +223,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:ellipsize="end"
-                        android:fontFamily="@font/inter_semi_bold"
+                        android:maxLines="2"
+                        android:fontFamily="@font/inter_light"
                         android:gravity="center"
-                        android:text="Kimlik Doğrulama"
-                        android:textColor="#8798AD"
+                        android:text="Kimlik\nDoğrulama"
+                        android:textColor="#184E9D"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -233,7 +240,7 @@
                     android:background="@drawable/bg_step_inactive"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="6dp">
 
                     <ImageView
                         android:id="@+id/ivSozlesmeOnaylari"
@@ -246,8 +253,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:ellipsize="end"
+                        android:maxLines="2"
                         android:gravity="center"
-                        android:text="Sözleşme Onayları"
+                        android:fontFamily="@font/inter_light"
+                        android:text="Sözleşme\nOnayları"
                         android:textColor="#A0A0A0"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -260,7 +269,7 @@
                     android:background="@drawable/bg_step_inactive"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="6dp">
 
                     <ImageView
                         android:id="@+id/ivYerindelikTesti"
@@ -273,7 +282,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:ellipsize="end"
+                        android:maxLines="2"
                         android:gravity="center"
+                        android:fontFamily="@font/inter_light"
                         android:text="Yerindelik\nTesti"
                         android:textColor="#A0A0A0"
                         android:textSize="12sp" />
@@ -282,8 +293,8 @@
 
             <ImageView
                 android:id="@+id/iv_title_icon"
-                android:layout_width="200dp"
-                android:layout_height="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="45dp"
                 android:scaleType="centerInside"
@@ -298,9 +309,9 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="32dp"
                 android:text="Kimlik Ön Yüzü"
-                android:textColor="#2E384D"
+                android:textColor="@color/title_color"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/inter_semi_bold"/>
 
             <!-- Açıklama -->
             <TextView
@@ -309,7 +320,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="8dp"
-                android:text=""
+                tools:text="asadsasasd"
+                android:fontFamily="@font/inter_light"
                 android:textColor="#8798AD"
                 android:textSize="14sp" />
 
@@ -332,9 +344,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_light"
                 android:text="Eğer daha önce kameraya erişim için onay vermediyseniz gerekli uyarı ekranı çıktığında onay vermelisiniz."
                 android:textColor="#8798AD"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
 
             <!-- Devam ve Geri Butonları -->
             <!--<LinearLayout

@@ -1,11 +1,16 @@
 package com.identify.design.nfc
 
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import com.airbnb.lottie.LottieDrawable
 import com.identify.design.R
+import com.identify.design.databinding.DialogInfoBinding
 import com.identify.design.databinding.FragmentNfcBinding
 import com.identify.design.util.alert
 import com.identify.sdk.ApiResponseStatusListener
@@ -151,11 +156,24 @@ class NfcFragment : BaseNfcFragment() {
     private fun getNfcTryAgainText(): String = getString(R.string.nfc_try_again)
 
     override fun showNfcMaxTryErrorDialog() {
-        requireContext().alert(false, getString(R.string.go_on),null,getString(R.string.nfc_error_count_title),getString(
-            R.string.nfc_error_count_desc),{ dialog ->
+        val binding = DialogInfoBinding.inflate(LayoutInflater.from(context))
+
+        val dialog = Dialog(requireContext()).apply {
+            setContentView(binding.root)
+            setCancelable(false)
+            window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        }
+
+        binding.tvTitle.text = getString(R.string.nfc_error_count_title)
+        binding.tvMessage.text = getString(R.string.nfc_error_count_desc)
+        binding.btnContinue.text = getString(R.string.go_on)
+
+        binding.btnContinue.setOnClickListener {
             finishNfcModuleWithError()
             dialog.dismiss()
-        },{},{})
+        }
+
+        dialog.show()
     }
 
     private fun setReadingNfcAnimation(): Int = R.raw.nfc_reading

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/ic_address_bg">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 <!--    <include
         layout="@layout/band_redirect_call"
@@ -13,130 +13,313 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>-->
 
-    <ImageView
-        android:id="@+id/ic_hedef_logo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_hedef_logo_white"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/textView2"
-        style="@style/TextAppearance.AppCompat.Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/address_title"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:fontFamily="@font/inter_semi_bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ic_hedef_logo"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/all_grey_border_white_bg"
-        android:padding="15dp"
-        android:textColorHint="@color/colorSoftGrey"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:gravity="top"
-            android:id="@+id/edtAddressView"
-            android:hint="@string/address_input"
-            android:maxLength="500"
-            android:inputType="textMultiLine"
-            android:minLines="2"
-            android:textColor="@android:color/black" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textView3"
-        style="@style/TextAppearance.AppCompat.Title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="@string/address_desc"
-        android:textColor="@android:color/white"
-        android:textSize="15sp"
-        android:fontFamily="@font/inter_semi_bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardTakePhotoView"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
-        app:cardBackgroundColor="#E2E8F0"
-        app:cardCornerRadius="13dp"
-        app:cardElevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
-
-        <TextView
-            android:id="@+id/cardTakePhotoViewTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imgBackground"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:textColor="#2E384D"
-            android:fontFamily="@font/inter_semi_bold"
-            android:text="@string/add_photo_pdf" />
-    </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:id="@+id/imgProofPhotoView"
-        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardConfirmAddressView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardTakePhotoView" />
+        android:fillViewport="true"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardConfirmAddressView">
 
-    <ImageView
-        android:id="@+id/imgCloseView"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_margin="5dp"
-        android:visibility="gone"
-        android:tint="@android:color/black"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/ic_close_img"
-        app:layout_constraintEnd_toEndOf="@+id/imgProofPhotoView"
-        app:layout_constraintTop_toTopOf="@+id/imgProofPhotoView" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hedef_logo"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/ivLogo">
+
+                <!-- Başlık -->
+                <TextView
+                    android:id="@+id/tvAdimlar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Adımlar"
+                    android:textColor="@color/title_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Adımlar Sekmeleri -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Kişisel Bilgilerim -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_step_active"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+                        <ImageView
+                            android:id="@+id/ivKisiselBilgilerim"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_person" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/inter_light"
+                            android:gravity="center"
+                            android:text="Kişisel\nBilgilerim"
+                            android:textColor="#37A311"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Kimlik Doğrulama -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_step_selected"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <ImageView
+                            android:id="@+id/ivKimlikDogrulama"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_person_2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:fontFamily="@font/inter_light"
+                            android:gravity="center"
+                            android:text="Kimlik\nDoğrulama"
+                            android:textColor="#184E9D"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Sözleşme Onayları -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_step_inactive"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <ImageView
+                            android:id="@+id/ivSozlesmeOnaylari"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_document" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:text="Sözleşme\nOnayları"
+                            android:fontFamily="@font/inter_light"
+                            android:textColor="#A0A0A0"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Yerindelik Testi -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_step_inactive"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <ImageView
+                            android:id="@+id/ivYerindelikTesti"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_document" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:text="Yerindelik\nTesti"
+                            android:fontFamily="@font/inter_light"
+                            android:textColor="#A0A0A0"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgProofPhotoView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_document"
+                app:layout_constraintTop_toBottomOf="@+id/ll_steps"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgCloseView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:tint="@android:color/black"
+                android:src="@drawable/ic_close_img"
+                app:layout_constraintEnd_toEndOf="@+id/imgProofPhotoView"
+                app:layout_constraintTop_toTopOf="@+id/imgProofPhotoView" />
+
+
+            <!-- Kimlik Ön Yüzü Başlık -->
+            <TextView
+                android:id="@+id/tv_cart_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:text="İkametgah Bilgileri"
+                android:textColor="@color/title_color"
+                android:textSize="16sp"
+                android:fontFamily="@font/inter_semi_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProofPhotoView"/>
+
+            <!-- Açıklama -->
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Lütfen ikametgah adresinizi yazınız."
+                android:textColor="#8798AD"
+                android:textSize="15sp"
+                android:fontFamily="@font/inter_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cart_title"/>
+
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="Adres"
+                android:textColor="@color/title_color"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_semi_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAddressView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_address"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/edittext_border_bg"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/address_desc"
+                android:textColor="#8798AD"
+                android:textSize="15sp"
+                android:fontFamily="@font/inter_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtAddressView" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTakePhotoView"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:cardBackgroundColor="#E2E8F0"
+                app:cardCornerRadius="13dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                <TextView
+                    android:id="@+id/cardTakePhotoViewTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgBackground"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textColor="#2E384D"
+                    android:fontFamily="@font/inter_semi_bold"
+                    android:text="@string/add_photo_pdf" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardConfirmAddressView"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:alpha="0.5"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
-        app:cardElevation="4dp"
         app:cardBackgroundColor="#E2E8F0"
         app:cardCornerRadius="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -150,7 +333,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:text="@string/confirm"
-            android:textColor="#2E384D"
+            android:textColor="@color/black"
             android:fontFamily="@font/inter_semi_bold" />
     </androidx.cardview.widget.CardView>
 

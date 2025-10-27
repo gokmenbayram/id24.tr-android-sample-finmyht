@@ -3,7 +3,6 @@
     android:id="@+id/linLayConnectionLost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/new_background"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -22,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:fontFamily="@font/nunito_sans_regular"
+        android:fontFamily="@font/inter_light"
         android:textSize="14sp"
         android:padding="20dp"
         android:text="@string/connection_error_title" />
@@ -44,8 +43,9 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="20dp"
             android:id="@+id/cardReConnectView"
-            app:cardElevation="4dp"
             android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="5dp"
             app:cardBackgroundColor="@android:color/white">
             <TextView
                 android:layout_width="wrap_content"
@@ -59,8 +59,8 @@
                 android:layout_gravity="center_vertical"
                 android:id="@+id/tvConnectionError"
                 android:text="@string/connection_try_again"
-                android:fontFamily="@font/nexa_slab_bold"
-                android:textColor="@color/colorDarkBlue"/>
+                android:fontFamily="@font/inter_semi_bold"
+                android:textColor="@color/title_color"/>
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>

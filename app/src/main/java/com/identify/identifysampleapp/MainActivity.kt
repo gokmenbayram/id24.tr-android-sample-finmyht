@@ -13,20 +13,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val identityOptions = IdentityOptions.Builder()
-//            .setIdentityType(
-//                listOf(
-//                    IdentifyModuleTypes.PREPARE,
-//                    IdentifyModuleTypes.SPEECH_TEST,
-//                    IdentifyModuleTypes.IDENTIFICATION_INFORMATION_WITH_CARD_PHOTO,
-//                    IdentifyModuleTypes.IDENTIFICATION_INFORMATION_WITH_NFC,
-//                    IdentifyModuleTypes.TAKE_SELFIE,
-//                    IdentifyModuleTypes.VALIDATE_ADDRESS,
-//                    IdentifyModuleTypes.LIVENESS_TEST,
-//                    IdentifyModuleTypes.VIDEO_RECORD,
-//                    IdentifyModuleTypes.SIGNATURE,
-//                    IdentifyModuleTypes.AGENT_CALL
-//                )
-//            )
+            .setIdentityType(
+                listOf(
+                    IdentifyModuleTypes.VALIDATE_ADDRESS,
+                    IdentifyModuleTypes.PREPARE,
+                    IdentifyModuleTypes.SPEECH_TEST,
+                    IdentifyModuleTypes.IDENTIFICATION_INFORMATION_WITH_CARD_PHOTO,
+                    IdentifyModuleTypes.IDENTIFICATION_INFORMATION_WITH_NFC,
+                    IdentifyModuleTypes.TAKE_SELFIE,
+                    IdentifyModuleTypes.LIVENESS_TEST,
+                    IdentifyModuleTypes.VIDEO_RECORD,
+                    IdentifyModuleTypes.SIGNATURE,
+                    IdentifyModuleTypes.AGENT_CALL
+                )
+            )
             .setNfcExceptionCount(3)
             .setCallConnectionTimeOut(20000)
             .setOpenIntroPage(false)

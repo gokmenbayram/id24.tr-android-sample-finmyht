@@ -1,54 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/relLayWelcome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/new_background"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_marginTop="60dp"
-        android:id="@+id/imgBackground"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
+        android:id="@+id/iv_header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_kimlik_basit_icon"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_oval_bg"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="-200dp"
-        android:id="@+id/imgThanksLogo"
-        android:layout_below="@id/imgBackground"
-        android:src="@drawable/identify_icon"
-        android:layout_centerHorizontal="true"/>
+        android:id="@+id/ic_hedef_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_hedef_logo_white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_identify_scan_success"
+        android:layout_marginTop="-105dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_header"/>
+
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nexa_slab_bold"
-        android:id="@+id/tvWelcome"
-        android:textColor="@android:color/white"
+        android:fontFamily="@font/inter_semi_bold"
         android:textSize="20sp"
         android:gravity="center"
-        android:layout_marginTop="-50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/finish_process"
-        android:layout_below="@+id/imgBackground"/>
+        android:textColor="#2E384D"
+        android:layout_marginHorizontal="55dp"
+        android:text="Kimlik Doğrulama Başarılı"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_success"/>
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_light"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="#8798AD"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="55dp"
+        android:text="Kimlik doğrulama aşamasını başarıyla tamamladınız, Teşekkürler."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardFinishView"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_below="@+id/tvWelcome"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="50dp"
-        app:cardBackgroundColor="@android:color/white"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="4dp">
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="15dp"
+        app:cardBackgroundColor="#E2E8F0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="13dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -56,10 +81,9 @@
             android:layout_below="@+id/imgBackground"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:fontFamily="@font/nexa_slab_bold"
+            android:fontFamily="@font/inter_semi_bold"
             android:text="@string/finish"
-            android:textColor="@color/colorDarkBlue"
-            android:textSize="18sp" />
+            android:textColor="#2E384D" />
     </androidx.cardview.widget.CardView>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

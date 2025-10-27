@@ -46,5 +46,6 @@
 	<color name="dark_blue">#2E384D</color>
 	<color name="white">#FFFFFF</color>
 	<color name="gray_10">#EEF2FF</color>
+	<color name="title_color">#2E384D</color>
 
 </resources>
