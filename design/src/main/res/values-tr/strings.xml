@@ -60,7 +60,7 @@
     <string name="connection_error_title">Bağlantınızı kontrol ediniz ve müşteri temsilcisine bağlanmak için tekrar bağlan butonuna tıklayınız.</string>
     <string name="enter_pin">Sms kodu hatalı. Lütfen kontrol ediniz.</string>
     <string name="enter_pin_description">Lütfen SMS kodunu giriniz.</string>
-    <string name="confirm">Devam Et</string>
+    <string name="confirm">Devam</string>
     <string name="are_you_sure_title">Bekleme odasından çıktığınızda müşteri temsilcisi sizi arayamayacak. Emin misiniz ?</string>
     <string name="nfc_error_count_title">Nfc Veri Okuma Sayacı Hatası</string>
     <string name="nfc_error_count_desc">Maksimum nfc okuma hatası sayısına ulaştınız. Müşteri temsilcisi ile devam edin.</string>
