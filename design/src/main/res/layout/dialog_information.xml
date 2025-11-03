@@ -297,8 +297,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="45dp"
-                android:scaleType="centerInside"
-                tools:src="@drawable/ic_nfc" />
+                android:scaleType="center"
+                tools:src="@drawable/ic_identity_front_2" />
 
 
             <!-- Kimlik Ön Yüzü Başlık -->
@@ -348,36 +348,6 @@
                 android:text="Eğer daha önce kameraya erişim için onay vermediyseniz gerekli uyarı ekranı çıktığında onay vermelisiniz."
                 android:textColor="#8798AD"
                 android:textSize="12sp" />
-
-            <!-- Devam ve Geri Butonları -->
-            <!--<LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginHorizontal="24dp"
-                android:layout_marginTop="16dp">
-
-                <Button
-                    android:id="@+id/btnDevam"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:background="@drawable/bg_base_button_gray"
-                    android:text="Devam"
-                    android:textAllCaps="false"
-                    android:enabled="false"
-                    android:textColor="@color/dark_blue"/>
-
-                <Button
-                    android:id="@+id/btnGeri"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:text="Geri"
-                    android:textAllCaps="false"
-                    android:background="@drawable/bg_base_button_light_gray"
-                    android:textColor="#2E384D"
-                    android:layout_marginTop="8dp"/>
-            </LinearLayout>-->
-
         </LinearLayout>
     </ScrollView>
 
@@ -404,7 +374,7 @@
 
     </androidx.cardview.widget.CardView>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnBack"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -413,6 +383,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="20dp"
+        android:gravity="center"
         android:background="@drawable/bg_base_button"
         android:backgroundTint="@color/white_10"
         android:fontFamily="@font/inter_semi_bold"
