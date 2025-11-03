@@ -387,11 +387,10 @@
         android:layout_height="50dp"
         app:cardCornerRadius="13dp"
         app:cardBackgroundColor="#E2E8F0"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/btnBack"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginEnd="30dp">
 
         <TextView
             android:id="@+id/tv_card_continue"
@@ -404,4 +403,20 @@
 
 
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_base_button"
+        android:backgroundTint="@color/white_10"
+        android:fontFamily="@font/inter_semi_bold"
+        android:text="Geri"
+        android:textColor="@color/title_color"/>
+
 </RelativeLayout>

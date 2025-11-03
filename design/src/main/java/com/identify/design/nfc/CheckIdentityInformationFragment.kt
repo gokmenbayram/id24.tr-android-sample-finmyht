@@ -15,9 +15,21 @@ class CheckIdentityInformationFragment : BaseCheckIdentityInformationFragment() 
         tvExpireDay = binding.tvExpireDayView
         tvBirthDay = binding.tvBirthDayView
         edtDocNumber = binding.edtDocNumberView
+
+        binding.btnBack.setOnClickListener {
+            handleBackNavigation()
+        }
     }
 
     override fun getDocumentNumberErrorText(): String? = getString(R.string.document_num_error)
+
+    /**
+     * Geri navigasyonu handle eder
+     * SDK'nın base fragment onBackPressed metodunu kullanarak önceki modüle döner
+     */
+    private fun handleBackNavigation() {
+       dismiss()
+    }
 
     override fun getBirthDayErrorText(): String? = getString(R.string.birth_day_error)
 

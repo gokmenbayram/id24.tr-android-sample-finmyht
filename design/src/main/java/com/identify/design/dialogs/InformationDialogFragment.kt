@@ -53,6 +53,17 @@ class InformationDialogFragment : BaseInformationDialogFragment() {
                 }
             )
         }
+
+        binding.btnBack.setOnClickListener {
+            handleBackNavigation()
+        }
+    }
+
+    /**
+     * Geri navigasyonu handle eder
+     */
+    private fun handleBackNavigation() {
+        backPressFromInformation()
     }
 
     override fun changeStatusColor(): Int? = android.R.color.transparent
