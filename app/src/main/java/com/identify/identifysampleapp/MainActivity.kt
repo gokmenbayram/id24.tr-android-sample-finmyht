@@ -51,6 +51,6 @@ class MainActivity : AppCompatActivity() {
             .options(identityOptions)
             .build()
 
-        identifyObject.startIdentification(this,"60f8f48ea6a586e58664ad3e1f391b3d61a25cbb","tr")
+        identifyObject.startIdentification(this,"ac33f650446ca9be428735992227a10c66ae814c","tr")
     }
 }

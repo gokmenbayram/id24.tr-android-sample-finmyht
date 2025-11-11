@@ -57,6 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:visibility="gone"
+        android:fontFamily="@font/inter_semi_bold"
         android:gravity="center_vertical"
         android:layout_marginStart="10dp"
         android:textColor="@android:color/black"
@@ -109,16 +110,16 @@
         android:layout_width="match_parent"
         android:visibility="visible"
         android:fitsSystemWindows="true"
-        android:background="@drawable/new_background_270"
+        android:background="@drawable/bg_gradient_toolbar"
         android:layout_height="match_parent">
         <TextView
             android:id="@+id/callWaitingTxt"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:fontFamily="@font/nexa_slab_bold"
+            android:fontFamily="@font/inter_semi_bold"
             android:textSize="24sp"
             android:text="@string/connecting_stream"
-            android:textColor="@android:color/white"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <ProgressBar

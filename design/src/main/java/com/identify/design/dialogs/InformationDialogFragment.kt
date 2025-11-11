@@ -72,7 +72,7 @@ class InformationDialogFragment : BaseInformationDialogFragment() {
         when(screenType) {
             ScreenType.CARD_FRONT_SIDE -> {
                 binding.rlContainer.visibility = View.GONE
-                binding.svContainer.visibility = View.VISIBLE
+                binding.llContainer.visibility = View.VISIBLE
 
                 binding.tvCartTitle.text = getString(R.string.id_front_title)
                 binding.tvCartDesc.text = getString(R.string.take_id_front_photo_instruction)
@@ -82,7 +82,7 @@ class InformationDialogFragment : BaseInformationDialogFragment() {
             }
             ScreenType.CARD_BACK_SIDE -> {
                 binding.rlContainer.visibility = View.GONE
-                binding.svContainer.visibility = View.VISIBLE
+                binding.llContainer.visibility = View.VISIBLE
 
                 binding.tvCartTitle.text = getString(R.string.id_back_title)
                 binding.tvCartDesc.text = getString(R.string.take_id_back_photo_instruction)
@@ -92,7 +92,7 @@ class InformationDialogFragment : BaseInformationDialogFragment() {
             }
             ScreenType.NFC_INFO -> {
                 binding.rlContainer.visibility = View.GONE
-                binding.svContainer.visibility = View.VISIBLE
+                binding.llContainer.visibility = View.VISIBLE
 
                 binding.tvCartTitle.text = "Çip Okuma (NFC)"
                 binding.tvCartDesc.text = "Kimliğinizi telefonunuza temas ettirin ve işlem bitene kadar hareket ettirmeyin."
@@ -102,7 +102,7 @@ class InformationDialogFragment : BaseInformationDialogFragment() {
             }
             ScreenType.SELFIE -> {
                 binding.rlContainer.visibility = View.GONE
-                binding.svContainer.visibility = View.VISIBLE
+                binding.llContainer.visibility = View.VISIBLE
 
                 binding.tvCartTitle.text = "Selfie Çekim"
                 binding.tvCartDesc.text = "Lütfen yüzünüzü kameraya odaklayarak bir selfie çekin. Hazırsanız devam ederek başlayabilirsiniz."
@@ -113,7 +113,7 @@ class InformationDialogFragment : BaseInformationDialogFragment() {
 
             ScreenType.ADDRESS_INFO -> {
                 binding.rlContainer.visibility = View.GONE
-                binding.svContainer.visibility = View.VISIBLE
+                binding.llContainer.visibility = View.VISIBLE
 
                 binding.tvCartTitle.text = "Adres Doğrulama"
                 binding.tvCartDesc.text = "Adresinizi teyit için güncel ikametgah belgesi veya son üç aya ait bir fatura görseli yükleyiniz."
@@ -123,7 +123,7 @@ class InformationDialogFragment : BaseInformationDialogFragment() {
             }
             else -> {
                 binding.rlContainer.visibility = View.VISIBLE
-                binding.svContainer.visibility = View.GONE
+                binding.llContainer.visibility = View.GONE
             }
         }
     }
