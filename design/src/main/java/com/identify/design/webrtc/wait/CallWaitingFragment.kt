@@ -5,6 +5,7 @@ import android.view.View
 import androidx.viewbinding.ViewBinding
 import com.identify.design.R
 import com.identify.design.databinding.FragmentWaitingCallBinding
+import com.identify.design.dialogs.CustomDialog
 import com.identify.sdk.base.viewBinding.viewBinding
 import com.identify.sdk.webrtc.wait.BaseCallWaitingFragment
 
@@ -16,6 +17,16 @@ class CallWaitingFragment : BaseCallWaitingFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         disconnectSocketWhenAppOnBackground()
+
+        binding.ivCloseApp.setOnClickListener {
+            CustomDialog(requireContext()).show(
+                title = "Uyarı",
+                message = "Çıkış yapmak istediğinize emin misiniz?",
+                onConfirm = {
+                    requireActivity().finish()
+                }
+            )
+        }
     }
 
     override fun setQueueMessage(numberOfMember: String, estimatedTime: String) {

@@ -4,6 +4,7 @@ package com.identify.design.webrtc.calling
 import androidx.viewbinding.ViewBinding
 import com.identify.design.R
 import com.identify.design.databinding.FragmentCallingBinding
+import com.identify.design.dialogs.CustomDialog
 import com.identify.sdk.base.viewBinding.viewBinding
 import com.identify.sdk.webrtc.calling.BaseCallingFragment
 
@@ -14,6 +15,16 @@ class CallingFragment : BaseCallingFragment() {
 
     override fun initViews() {
         btnAcceptCall = binding.ibAcceptCallView
+
+        binding.ivCloseApp.setOnClickListener {
+            CustomDialog(requireContext()).show(
+                title = "Uyarı",
+                message = "Çıkış yapmak istediğinize emin misiniz?",
+                onConfirm = {
+                    requireActivity().finish()
+                }
+            )
+        }
     }
 
     override fun changeStatusColor(): Int? = android.R.color.transparent

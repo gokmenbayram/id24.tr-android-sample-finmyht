@@ -12,6 +12,7 @@ import com.airbnb.lottie.LottieDrawable
 import com.identify.design.R
 import com.identify.design.databinding.DialogInfoBinding
 import com.identify.design.databinding.FragmentNfcBinding
+import com.identify.design.dialogs.CustomDialog
 import com.identify.design.util.alert
 import com.identify.sdk.ApiResponseStatusListener
 import com.identify.sdk.base.*
@@ -33,6 +34,16 @@ class NfcFragment : BaseNfcFragment() {
         /*binding.directCallWaitingView.cardDirectCallWaiting.setOnClickListener {
             goDirectCallWaiting()
         }*/
+
+        binding.ivCloseApp.setOnClickListener {
+            CustomDialog(requireContext()).show(
+                title = "Uyarı",
+                message = "Çıkış yapmak istediğinize emin misiniz?",
+                onConfirm = {
+                    requireActivity().finish()
+                }
+            )
+        }
 
         binding.cardNextView.setOnClickListener {
             finishNfcModule()

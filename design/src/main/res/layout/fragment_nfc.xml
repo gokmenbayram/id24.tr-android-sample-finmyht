@@ -73,7 +73,20 @@
 
     </LinearLayout>-->
 
+
     <ImageView
+        android:id="@+id/iv_close_app"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_home_white"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ic_hedef_logo"
+        app:layout_constraintBottom_toBottomOf="@id/ic_hedef_logo"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:id="@+id/ic_hedef_logo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_hedef_logo_white"
